@@ -14,10 +14,10 @@ public class Vendedor {
         System.out.println("** CALCULADORA DE COMISSÕES**");
         System.out.println("-----------------------------");
         //Obtem o nome do vendedor
-        System.out.print("Qual nome do vendedor?");
+        System.out.print("Qual nome do vendedor? ");
         nomeVendedor = leitor.nextLine();
         //Obtem total de vendas
-        System.out.print("Qual total de vendas do(a)"+ nomeVendedor + "?");
+        System.out.print("Qual total de vendas do(a) "+ nomeVendedor + "? ");
         totalDeVendas = leitor.nextDouble();
         calcularComissao();
     }
@@ -43,9 +43,10 @@ public class Vendedor {
     }
     public void iniciarPrograma(){
         Scanner leitor = new Scanner(System.in);
-        double resposta;
-        System.out.print("Calcular a comissão de outro vendedor?");
-        resposta = leitor.nextDouble();
+        int resposta;
+        System.out.println("Calcular a comissão de outro vendedor? ");
+        System.out.print("Digite 1 para sim e 0 para sair: ");
+        resposta = leitor.nextInt();
         if(resposta == 1){
             obterDados();
         } else {
